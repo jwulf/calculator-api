@@ -1,7 +1,14 @@
-import * as Route from '../src/routes/routes'
+import { RouteConfig } from '../src/routes/route-config'
+import { buildHATEOASResponder } from '../src/routes/route-logic'
+
+// Convert config array to object
+const Routes = RouteConfig.reduce((obj, route) => {
+  obj[route.rel] = route
+  return obj
+}, {})
 
 describe('add', () => {
-    const add = Route.responseBuilder(Route.addFn)
+    const add = buildHATEOASResponder(Routes.add.fn)
     it('returns a list of links',
         () => expect(add(4).links.length).toBe(4))
     it('returns a currentTotal',
@@ -15,7 +22,7 @@ describe('add', () => {
 })
 
 describe('subtract', () => {
-    const subtract = Route.responseBuilder(Route.subtractFn)
+    const subtract = buildHATEOASResponder(Routes.subtract.fn)
     it('returns a list of links',
         () => expect(subtract(4).links.length).toBe(4))
     it('returns a currentTotal',
@@ -29,7 +36,7 @@ describe('subtract', () => {
 })
 
 describe('divide', () => {
-    const divide = Route.responseBuilder(Route.divideFn)
+    const divide = buildHATEOASResponder(Routes.divide.fn)
     it('returns a list of links',
         () => expect(divide(4).links.length).toBe(4))
     it('returns a currentTotal',
@@ -43,7 +50,7 @@ describe('divide', () => {
 })
 
 describe('multiply', () => {
-    const multiply = Route.responseBuilder(Route.multiplyFn)
+    const multiply = buildHATEOASResponder(Routes.multiply.fn)
     it('returns a list of links',
         () => expect(multiply(4).links.length).toBe(4))
     it('returns a currentTotal',
@@ -57,11 +64,11 @@ describe('multiply', () => {
 })
 
 describe('link builder', () => {
-    const multiply = Route.responseBuilder(Route.multiplyFn)
+    const multiply = buildHATEOASResponder(Routes.multiply.fn)
     const X = 5
     const Y = 6
     it('returns the correct add link for one arg',
-        () => expect(multiply(X).links.filter(link => link.href === `${Route.RouteConfig.add}/${X}/`).length).toBe(1))
+        () => expect(multiply(X).links.filter(link => link.href === `${Routes.add.href}/${X}/`).length).toBe(1))
     it('returns the correct add link for two args',
-        () => expect(multiply(X, Y).links.filter(link => link.href === `${Route.RouteConfig.add}/${X * Y}/`).length).toBe(1))
+        () => expect(multiply(X, Y).links.filter(link => link.href === `${Routes.add.href}/${X * Y}/`).length).toBe(1))
 })
