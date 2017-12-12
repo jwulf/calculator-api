@@ -15,7 +15,7 @@ function buildHATEOASResponse(currentTotal) {
     RouteConfig.forEach(route =>
         links.push({
             rel: route.rel,
-            href: `${route.href}/${currentTotal}/`,
+            href: `${route.href}/${currentTotal}`,
             type: 'GET'
         }))
     return {
