@@ -29,6 +29,8 @@
   "devDependencies": {
     "@types/express": "^4.0.39",
     "@types/node": "^8.0.58",
-    "nodemon": "^1.12.5"
+    "nodemon": "^1.12.5",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
   }
 }
