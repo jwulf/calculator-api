@@ -61,7 +61,7 @@ describe('link builder', () => {
     const X = 5
     const Y = 6
     it('returns the correct add link for one arg',
-        () => expect(multiply(X).links.filter(link => link.href === `/add/${X}/`).length).toBe(1))
+        () => expect(multiply(X).links.filter(link => link.href === `${Route.RouteConfig.add}/${X}/`).length).toBe(1))
     it('returns the correct add link for two args',
-        () => expect(multiply(X, Y).links.filter(link => link.href === `/add/${X * Y}/`).length).toBe(1))
+        () => expect(multiply(X, Y).links.filter(link => link.href === `${Route.RouteConfig.add}/${X * Y}/`).length).toBe(1))
 })

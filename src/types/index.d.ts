@@ -1,5 +1,5 @@
-export type MutationFn = (x: number, y?: number) => number
-export type HATEOASResponse = {
+declare type MutationFn = (x: number, y?: number) => number
+declare type HATEOASResponse = {
     currentTotal: number,
     links: {
         rel: string,
@@ -7,4 +7,9 @@ export type HATEOASResponse = {
         type: string
     }[]
 }
-export type HATEOASResponder = (x: number, y?: number) => HATEOASResponse
+declare type HATEOASResponder = (x: number, y?: number) => HATEOASResponse
+declare type RouteObject = {
+    href: string,
+    rel: string,
+    fn: (x: number, y?: number) => number
+ }[]
