@@ -1,7 +1,7 @@
 {
-  "name": "creditsense",
+  "name": "rest-calculator",
   "version": "1.0.0",
-  "description": "The Credit Sense code test",
+  "description": "A Calculator that uses a HATEOAS REST API",
   "main": "index.js",
   "scripts": {
     "start": "node dst/index.js",
