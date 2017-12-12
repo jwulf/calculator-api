@@ -1,6 +1,6 @@
 import { RoutePaths } from '../routes/route-paths'
 
-export function buildURLs(currentTotal = 0) {
+export function buildHATEOASURLs(currentTotal = 0) {
     return [
         {
             rel: 'add',
