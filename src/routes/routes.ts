@@ -1,7 +1,6 @@
 import * as express from 'express'
 import { HATEOASResponder, HATEOASResponse, MutationFn } from '../types'
 import { RoutePaths } from './route-paths'
-import { buildHATEOASURLs } from './hateoas-builder'
 
 export const addFn = (x: number, y = 0) => x + y
 export const divideFn = (x: number, y = 1) => x / y
@@ -20,10 +19,30 @@ export const divideRoute = routeBuilder(responseBuilder(divideFn))
 export const multiplyRoute = routeBuilder(responseBuilder(multiplyFn))
 export const subtractRoute = routeBuilder(responseBuilder(subtractFn))
 
-// For testing
-export const fns = {
-    addFn,
-    subtractFn,
-    multiplyFn,
-    divideFn
+export function buildHATEOASURLs(currentTotal: number): HATEOASResponse {
+  return {
+    currentTotal,
+    links: [
+      {
+        rel: 'add',
+        href: `${RoutePaths.add}/${currentTotal}/`,
+        type: 'GET'
+      },
+      {
+        rel: 'subtract',
+        href: `${RoutePaths.subtract}/${currentTotal}/`,
+        type: 'GET'
+      },
+      {
+        rel: 'multiply',
+        href: `${RoutePaths.multiply}/${currentTotal}/`,
+        type: 'GET'
+      },
+      {
+        rel: 'divide',
+        href: `${RoutePaths.divide}/${currentTotal}/`,
+        type: 'GET'
+      }
+    ]
+  }
 }
