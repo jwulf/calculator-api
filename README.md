@@ -1,4 +1,4 @@
-# Credit Sense Calculator
+# Calculator over REST
 
 ## To run
 
