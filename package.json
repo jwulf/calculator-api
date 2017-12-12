@@ -8,7 +8,8 @@
     "compile": "./node_modules/.bin/tsc",
     "test": "jest",
     "dev-server": "./node_modules/.bin/nodemon dst/index.js",
-    "dev-compile": "./node_modules/.bin/tsc --watch"
+    "dev-compile": "./node_modules/.bin/tsc --watch",
+    "apidocs": "apidoc -i doc/ -o www/apidoc"
   },
   "jest": {
     "transform": {
@@ -23,6 +24,13 @@
       "json",
       "node"
     ]
+  },
+  "apidoc": {
+    "name": "calculator",
+    "version": "0.1.0",
+    "description": "Calculator REST API",
+    "title": "The Calculator REST API",
+    "url" : "http://localhost:3000"
   },
   "author": "Josh Wulf <josh@magikcraft.io>",
   "license": "ISC",

@@ -62,3 +62,12 @@ npm run dev-server
 
 4. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in a browser.
 
+## To regenerate API Docs
+
+Documentation is in `doc/apidoc.js`.
+
+Run:
+
+```
+npm run apidocs
+```

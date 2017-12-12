@@ -10,6 +10,11 @@ body {
 	-o-user-select:none;
 	user-select:none;
 }
+.apidoc a {
+	color: white;
+	font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:26px;
+}
 .calculator{
 	width:240px;
 	height:auto;
