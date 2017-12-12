@@ -41,7 +41,17 @@ $('#backspace').click(function (){
 	if($('#screen').val().length == 0)
 		$('#screen').val(0);
 });
-var result = function(){
+$('.digit').click(function(e) {
+	screen(e.target.value);
+});
+$('#divide, #multiply, #minus, #plus').click(function(e) {
+	calculate(e.target.value);
+});
+$('#equal').click(function() {
+	result();
+});
+
+function result(){
 	if(memory == 0)
 	return;
 	c = true;
@@ -65,12 +75,3 @@ var result = function(){
 	flag = false;
 	memory = 0;
 };
-$('.digit').click(function(e) {
-	screen(e.target.value);
-});
-$('#divide, #multiply, #minus, #plus').click(function(e) {
-	calculate(e.target.value);
-});
-$('#equal').click(function() {
-	result();
-});
