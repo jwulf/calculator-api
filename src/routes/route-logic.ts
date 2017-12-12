@@ -1,9 +1,14 @@
 import * as express from 'express'
 import { RouteConfig } from './route-config'
 
-export const buildRouteHandler = HATEOASResponder => (req, res) => res.send(HATEOASResponder(req.params.x, req.params.y))
+export const buildRouteHandler = HATEOASResponder => (req, res) => {
+    const { x, y } = req.params
+    const numX = parseFloat(x)
+    const numY = y ? parseFloat(y) : undefined
+    res.send(HATEOASResponder(numX, numY))
+}
 
-export const buildHATEOASResponder = fn => (x = 0, y?) => buildHATEOASResponse(fn(x, y))
+export const buildHATEOASResponder = fn => (x = '0', y?) => buildHATEOASResponse(fn(x, y))
 
 function buildHATEOASResponse(currentTotal) {
     const links: any[] = []
