@@ -1,6 +1,5 @@
 import * as Route from '../src/routes/routes'
 
-console.log('asdfa')
 describe('add', () => {
     const add = Route.responseBuilder(Route.addFn)
     it('returns a list of links',
