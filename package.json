@@ -24,7 +24,8 @@
   "author": "Josh Wulf <josh@magikcraft.io>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "route-cache": "^0.4.3"
   },
   "devDependencies": {
     "@types/express": "^4.0.39",
