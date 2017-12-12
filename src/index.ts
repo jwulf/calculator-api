@@ -1,9 +1,6 @@
 import * as express from 'express'
 import * as routeCache from 'route-cache'
-import { addRoute } from './routes/add'
-import { subtractRoute } from './routes/subtract'
-import { multiplyRoute } from './routes/multiply'
-import { divideRoute } from './routes/divide'
+import { addRoute, subtractRoute, multiplyRoute, divideRoute} from './routes/routes'
 import { RoutePaths } from './routes/route-paths'
 
 const app = express()
