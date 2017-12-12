@@ -1,4 +1,3 @@
-import * as express from 'express'
 import { RouteConfig } from './route-config'
 
 export const buildRouteHandler = HATEOASResponder => (req, res) => {
