@@ -2,7 +2,7 @@ import * as express from 'express'
 import { addRoute } from './routes/add'
 import { subtractRoute } from './routes/subtract'
 import { multiplyRoute } from './routes/multiply'
-import { divideRoute } from './routes/divide';
+import { divideRoute } from './routes/divide'
 
 const app = express()
 

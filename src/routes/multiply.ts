@@ -1,9 +1,3 @@
+export function multiplyRoute(req: Express.Request, res: Express.Response) {}
 
-
-export function multiplyRoute(req: Express.Request, res: Express.Response) {
-
-}
-
-export function multiply() {
-
-}
+export function multiply() {}
