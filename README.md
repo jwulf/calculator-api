@@ -12,6 +12,20 @@ npm start
 
 2. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in a browser.
 
+## To run tests
+
+1. Install dependencies:
+
+```
+npm i
+```
+
+2. Run tests:
+
+```
+npm test
+```
+
 ## To develop
 
 1. Install dependencies:
