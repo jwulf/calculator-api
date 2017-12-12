@@ -64,10 +64,11 @@ npm run dev-server
 
 ## To regenerate API Docs
 
-Documentation is in `doc/apidoc.js`.
+Documentation source is in `doc/apidoc.js`. The built HTML version of documentation is output to `www/apidoc`.
 
 Run:
 
 ```
+npm i -g apidoc
 npm run apidocs
 ```
