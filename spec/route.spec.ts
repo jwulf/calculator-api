@@ -56,3 +56,13 @@ describe('multiply', () => {
     it('returns a list of links with two args',
         () => expect(multiply(7, -8).links.length).toBe(4))
 })
+
+describe('link builder', () => {
+    const multiply = Route.responseBuilder(Route.multiplyFn)
+    const X = 5
+    const Y = 6
+    it('returns the correct add link for one arg',
+        () => expect(multiply(X).links.filter(link => link.href === `/add/${X}/`).length).toBe(1))
+    it('returns the correct add link for two args',
+        () => expect(multiply(X, Y).links.filter(link => link.href === `/add/${X * Y}/`).length).toBe(1))
+})
