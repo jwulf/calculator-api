@@ -4,8 +4,11 @@
   "description": "The Credit Sense code test",
   "main": "index.js",
   "scripts": {
+    "start": "node dst/index.js",
+    "compile": "./node_modules/.bin/tsc",
     "test": "jest",
-    "dev": "./node_modules/nodemon/bin/nodemon.js dst/index.js"
+    "dev-server": "./node_modules/.bin/nodemon dst/index.js",
+    "dev-compile": "./node_modules/.bin/tsc --watch"
   },
   "jest": {
     "transform": {
