@@ -28,6 +28,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "morgan": "^1.9.0",
     "route-cache": "^0.4.3"
   },
   "devDependencies": {

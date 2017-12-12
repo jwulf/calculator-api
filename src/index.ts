@@ -1,4 +1,5 @@
 import * as express from 'express'
+import * as morgan from 'morgan'
 import * as routeCache from 'route-cache'
 import { Routes } from './routes'
 
@@ -6,6 +7,7 @@ const CACHE_SECONDS = 60
 
 const app = express()
 
+app.use(morgan('short'))
 app.use(express.static('www'))
 
 Routes.forEach(route =>
