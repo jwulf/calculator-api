@@ -10,24 +10,24 @@
 
 <body>
     <div class="calculator">
-        <input id="screen" class="screen" value="0" />
+        <input id="screen" class="screen" data-bind="value: currentValue" />
         <div class="buttons">
             <button id="clear" value="">C</button>
             <button id="backspace" value="-">⬅</button>
             <button id="sign" value="-+">±</button>
-            <button id="divide" value="/">÷</button>
+            <button id="divide" value="divide">÷</button>
             <button class="digit" value="7">7</button>
             <button class="digit" value="8">8</button>
             <button class="digit" value="9">9</button>
-            <button id="multiply" value="*">×</button>
+            <button id="multiply" value="multiply">×</button>
             <button class="digit" value="4">4</button>
             <button class="digit" value="5">5</button>
             <button class="digit" value="6">6</button>
-            <button id="minus" value="-">-</button>
+            <button id="minus" value="subtract">-</button>
             <button class="digit" value="1">1</button>
             <button class="digit" value="2">2</button>
             <button class="digit" value="3">3</button>
-            <button id="plus" value="+">+</button>
+            <button id="plus" value="add">+</button>
             <button class="digit" value="0">0</button>
             <button class="digit" value=".">.</button>
             <button id="equal" value="=">=</button>
