@@ -1,8 +1,7 @@
 import { HATEOASResponse, MutationFn } from '../types'
 import { RoutePaths } from '../routes/route-paths'
 
-export function buildHATEOASURLs(fn: MutationFn, x: number, y = 0): HATEOASResponse {
-  const currentTotal = fn(x, y)
+export function buildHATEOASURLs(currentTotal: number): HATEOASResponse {
   return {
     currentTotal,
     links: [
