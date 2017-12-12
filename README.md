@@ -1,5 +1,19 @@
 # Calculator over REST
 
+## To run using Docker
+
+Pre-requisites:
+* Docker
+* docker-compose
+
+1. Run the following command:
+
+```
+./docker-run.sh
+```
+
+2. Open http://127.0.0.1:3000 in a browser.
+
 ## To run
 
 1. Run the following commands:
